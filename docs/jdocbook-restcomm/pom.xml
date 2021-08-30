@@ -10,7 +10,7 @@
 	<artifactId>restcomm-sctp-docs-jdocbook-restcomm</artifactId>
 
 	<modelVersion>4.0.0</modelVersion>
-	<name>Restcomm :: SCTP :: Docs :: Build :: ${pom.artifactId}</name>
+	<name>Restcomm :: SCTP :: Docs :: Build :: ${project.artifactId}</name>
 	<packaging>jdocbook</packaging>
 
 
@@ -60,9 +60,9 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>${pom.groupId}</groupId>
+									<groupId>${project.groupId}</groupId>
 									<artifactId>restcomm-sctp-docs-sources-restcomm</artifactId>
-									<version>${pom.version}</version>
+									<version>${project.version}</version>
 									<type>jar</type>
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.build.directory}/docbook/resources</outputDirectory>

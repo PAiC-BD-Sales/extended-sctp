@@ -8,7 +8,7 @@
 	</parent>
 
 	<artifactId>sctp-api</artifactId>
-	<name>Restcomm :: SCTP :: API :: ${pom.artifactId}</name>
+	<name>Restcomm :: SCTP :: API :: ${project.artifactId}</name>
 
 
 	<dependencies>
@@ -16,10 +16,6 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 		</dependency>
-			<dependency>
-				<groupId>org.mobicents.commons</groupId>
-				<artifactId>commons</artifactId>
-			</dependency>		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

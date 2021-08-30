@@ -8,7 +8,7 @@
 	</parent>
 
 	<artifactId>sctp-impl</artifactId>
-	<name>Restcomm :: SCTP :: Impl :: ${pom.artifactId}</name>
+	<name>Restcomm :: SCTP :: Impl :: ${project.artifactId}</name>
 
 
 	<dependencies>
@@ -23,9 +23,9 @@
 			<version>${javolution.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>${pom.groupId}</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>sctp-api</artifactId>
-			<version>${pom.version}</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.testng</groupId>

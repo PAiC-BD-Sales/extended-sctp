@@ -30,16 +30,16 @@
 	</modules>
 
 	<distributionManagement>
-		<repository>
-			<id>paicbd</id>
-			<name>localhost-releases</name>
-			<url>http://45.33.115.65:8081/artifactory/libs-release-local</url>
-		</repository>
-		<snapshotRepository>
-			<id>paicbd</id>
-			<name>localhost-snapshots</name>
-			<url>http://45.33.115.65:8081/artifactory/libs-release-local</url>
-		</snapshotRepository>
+		 <repository>
+		     <id>github</id>
+		     <name>GitHub PAiCBD Apache Maven Packages</name>
+		     <url>https://maven.pkg.github.com/PAiC-team/extended-sctp</url>
+		   </repository>
+		 <snapshotRepository>
+		     <id>github</id>
+		     <name>GitHub PAiCBD Apache Maven Packages</name>
+		     <url>https://maven.pkg.github.com/PAiC-team/extended-sctp</url>
+		   </snapshotRepository>
 	</distributionManagement>
 
 	<dependencyManagement>
@@ -166,6 +166,20 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.6.7</version>
+				<extensions>false</extensions>
+				<executions combine.self="override">
+					<execution>
+						<id>deploy-to-sonatype</id>
+						<phase>none</phase>
+					</execution>
+				</executions>
+				<configuration combine.self="override">
+				</configuration>
+			</plugin>
+			<plugin>
 				<artifactId>maven-eclipse-plugin</artifactId>
 				<groupId>org.mobicents.tools</groupId>
 				<version>
@@ -211,27 +225,13 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.sonatype.plugins</groupId>
-				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>1.6.7</version>
-				<extensions>true</extensions>
-				<executions>
-					<execution>
-						<id>deploy-to-sonatype</id>
-						<phase>none</phase>
-					</execution>
-				</executions>
-				<configuration combine.self="override">
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
 
 	<scm>
-		<connection>scm:git:https://github.com/RestComm/sctp.git</connection>
-		<developerConnection>scm:git:git@github.com:RestComm/sctp.git</developerConnection>
-		<url>https://github.com/RestComm/sctp</url>
+		<connection>scm:git:https://github.com/PAiC-team/extended-sctp.git</connection>
+		<developerConnection>scm:git:git@github.com:PAiC-team/extended-sctp.git</developerConnection>
+		<url>https://github.com/PAiC-team/extended-sctp</url>
 	</scm>
 	<!-- repositories -->
 	<repositories>

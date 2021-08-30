@@ -24,8 +24,6 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.util.ReferenceCountUtil;
 
-import org.mobicents.commons.HexTools;
-
 /**
  * The actual pay load data received or to be sent from/to underlying socket
  *
